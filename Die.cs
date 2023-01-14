@@ -6,10 +6,15 @@ namespace DieRoller {
     /// </summary>
     public class Die {
 
+        //object constructor
+        public Die() {
+            Roll();
+        }
+
         /// <summary>
         /// current face up value of die
         /// </summary>
-        public byte FaceValue { get; set; }
+        public byte FaceValue { get; private set; }
 
         /// <summary>
         /// true if die is currently held
