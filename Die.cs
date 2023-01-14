@@ -6,7 +6,9 @@ namespace DieRoller {
     /// </summary>
     public class Die {
 
-        //object constructor
+        /// <summary>
+        /// object constructor
+        /// </summary>
         public Die() {
             Roll();
         }
@@ -28,14 +30,16 @@ namespace DieRoller {
         /// <returns> new random number </returns>
         public byte Roll() {
 
-            //generate random number 
-            //cast newValue as byte because random returnss and integer 
-            Random random = new Random();
-            byte newValue = (byte)random.Next(1, 7);
+            if (!IsHeld) {
 
-            FaceValue = newValue;
+				//generate random number 
+				//cast newValue as byte because random returnss and integer 
+				Random random = new Random();
+				byte newValue = (byte)random.Next(1, 7);
 
-            return FaceValue;
+				FaceValue = newValue;
+			}
+			return FaceValue;
         }
     }
 }

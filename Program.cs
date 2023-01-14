@@ -1,10 +1,16 @@
 ﻿using DieRoller;
 
 Die myDie = new Die(); //when die is created a random facevalue should be set
-myDie.FaceValue = 6; //setting face value should not be allowed outside of the class
+Console.WriteLine(myDie.FaceValue);
+myDie.Roll();
 
+Console.WriteLine(myDie.FaceValue);
 myDie.Roll();
+
+Console.WriteLine(myDie.FaceValue);
 myDie.Roll();
-myDie.Roll();
+
+myDie.IsHeld = true;
+Console.WriteLine("holding the die");
 
 Console.ReadKey();
