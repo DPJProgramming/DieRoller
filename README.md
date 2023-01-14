@@ -1,4 +1,5 @@
 # DieRoller
 A console app to roll some dice.
 
-## Requires .Net 6.0
+## Requirements 
+.Net 6.0
