@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Die_Roller {
+namespace DieRoller {
 
     /// <summary>
     /// Represents a single six sided die(1-6)
@@ -22,7 +22,15 @@ namespace Die_Roller {
         /// </summary>
         /// <returns> new random number </returns>
         public byte Roll() {
-            throw new NotImplementedException();
+
+            //generate random number 
+            //cast newValue as byte because random returnss and integer 
+            Random random = new Random();
+            byte newValue = (byte)random.Next(1, 7);
+
+            FaceValue = newValue;
+
+            return FaceValue;
         }
     }
 }
