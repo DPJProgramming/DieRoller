@@ -6,10 +6,16 @@ namespace DieRoller {
     /// </summary>
     public class Die {
 
-        /// <summary>
-        /// object constructor
-        /// </summary>
-        public Die() {
+		private static Random _random;
+
+		static Die() {
+			_random = new Random();
+		}
+
+		/// <summary>
+		/// object constructor
+		/// </summary>
+		public Die() {
             Roll();
         }
 
